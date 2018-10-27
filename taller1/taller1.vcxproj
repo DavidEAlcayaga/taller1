@@ -147,10 +147,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Administrador.h" />
+    <ClInclude Include="Cliente.h" />
+    <ClInclude Include="Evento.h" />
+    <ClInclude Include="ListaEvento.h" />
+    <ClInclude Include="ListaPersona.h" />
+    <ClInclude Include="Persona.h" />
+    <ClInclude Include="Sistema.h" />
+    <ClInclude Include="SistemaImpl.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Administrador.cpp" />
+    <ClCompile Include="Cliente.cpp" />
+    <ClCompile Include="Evento.cpp" />
+    <ClCompile Include="ListaEvento.cpp" />
+    <ClCompile Include="ListaPersona.cpp" />
+    <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Sistema.cpp" />
+    <ClCompile Include="SistemaImpl.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

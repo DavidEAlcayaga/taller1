@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "ListaPersona.h"
 using namespace std;
 class Evento
 {
@@ -16,6 +17,12 @@ private:
 
 public:
 	Evento();
+	Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, ListaPersona* listaAdministrador);
 	~Evento();
+
+private:
+	string verifyAdmin(ListaPersona* listaAdministrador, string ciudad);
+
 };
+
 

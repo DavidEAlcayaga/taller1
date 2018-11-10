@@ -8,7 +8,8 @@ private:
 	int n;
 
 public:
-	ListaPersona();
+	ListaPersona(); //Siempre hay que conservar el constructor vacío
+	ListaPersona(int n);
 	~ListaPersona();
 };
 

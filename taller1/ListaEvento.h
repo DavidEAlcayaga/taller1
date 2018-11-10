@@ -8,7 +8,8 @@ private:
 	int n;
 
 public:
-	ListaEvento();
+	ListaEvento(); //Siempre hay que conservar el constructor vacío
+	ListaEvento(int max);
 	~ListaEvento();
 };
 

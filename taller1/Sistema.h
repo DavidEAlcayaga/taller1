@@ -3,11 +3,14 @@
 class Sistema
 {
 private:
-	ListaPersona * listaPersonaCliente;
-	ListaPersona * listaPersonaAdministrador;
+	ListaPersona * clientes;
+	ListaPersona * administradores;
+	ListaEvento * eventos;
+	int correlativoAdmn;
+  int correlativoCliente;
+  int correlativoEvento;
 
 public:
 	Sistema();
 	~Sistema();
 };
-

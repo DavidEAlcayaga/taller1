@@ -7,11 +7,17 @@ using namespace std;
 class Cliente : public Persona
 {
 private:
-	int numeroTelefonico;
-	ListaEvento* listaEventoContratado;
+	int telefono;
+  ListaEvento* eventosContratados;
 
 public:
 	Cliente();
-	~Cliente();
-};
+  Cliente(string nombre, string apellido, string ciudad, int telefono, int id);
 
+  ListaEvento* getEventosContratados();
+  int getTelefono();
+	
+	string toString() override;
+
+  virtual ~Cliente();
+};

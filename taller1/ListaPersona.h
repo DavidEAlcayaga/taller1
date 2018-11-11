@@ -3,17 +3,22 @@
 class ListaPersona
 {
 private:
-	Persona* listaPersona;
-	int max;
-	int n;
+    Persona* listaPersona;
+    int max;
+    int cant;
 
 public:
-	ListaPersona(); //Siempre hay que conservar el constructor vacío
-	ListaPersona(int n);
-	bool addPersona(Persona persona);
-	Persona* buscarPersona(string id);
-	bool eliminarPersona(string id);
-	int getN();
-	~ListaPersona();
-};
+    //Constructores
+    ListaPersona();
+    ListaPersona(int max);
+    //Metodos del ArrayList
 
+    bool addPersona(Persona persona);
+    Persona* buscarPersona(string id);
+    bool eliminarPersona(string id);
+    string toString();
+    int getCant();
+
+    //Destructor
+    ~ListaPersona();
+};

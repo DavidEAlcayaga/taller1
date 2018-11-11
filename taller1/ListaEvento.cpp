@@ -39,6 +39,17 @@ Evento * ListaEvento::buscarEvento(string idEvento)
 	}
 }
 
+void ListaEvento::buscarEventoTipo(string tipo)
+{
+	for (int i = 0; i < n; i++) {
+		if ((this->listaEvento[i].getTipo()).compare(tipo) || tipo.compare("todos")) {
+			cout << listaEvento[i].getNombre();
+			cout << listaEvento[i].getIdEvento();
+			cout << listaEvento[i].getEstado();
+		}
+	}
+}
+
 bool ListaEvento::eliminarEvento(string idEvento)
 {
 	int i = 0;

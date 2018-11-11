@@ -1,5 +1,9 @@
 #pragma once
 #include "Evento.h"
+#include <string>
+#include <iostream>
+using namespace std;
+
 class ListaEvento
 {
 private:
@@ -12,6 +16,7 @@ public:
 	ListaEvento(int max);
 	bool addEvento(Evento evento);
 	Evento* buscarEvento(string idEvento);
+	void buscarEventoTipo(string tipo);
 	bool eliminarEvento(string idEvento);
 	int getN();
 	~ListaEvento();

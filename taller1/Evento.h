@@ -19,9 +19,16 @@ public:
 	Evento();
 	Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, ListaPersona* listaAdministrador);
 	string getIdEvento();
+	string getNombre();
+	string getEstado();
+	string getTipo();
+	void setRealizado();
+	void setCancelado();
+	void setPorRealizar();
 	~Evento();
 
 private:
+	int utilidad();
 	string verifyAdmin(ListaPersona* listaAdministrador, string ciudad);
 
 };

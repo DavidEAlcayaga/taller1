@@ -22,6 +22,7 @@ public:
 	string getNombre();
 	string getEstado();
 	string getTipo();
+	void setId(string id);
 	void setRealizado();
 	void setCancelado();
 	void setPorRealizar();

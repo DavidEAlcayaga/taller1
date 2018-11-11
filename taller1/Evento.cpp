@@ -38,6 +38,11 @@ string Evento::getTipo()
 	return this->tipo;
 }
 
+void Evento::setId(string id)
+{
+	this->idEvento = id;
+}
+
 void Evento::setRealizado()
 {
 	this->estado = "realizado";

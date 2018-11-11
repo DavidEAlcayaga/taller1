@@ -10,6 +10,10 @@ private:
 public:
 	ListaEvento(); //Siempre hay que conservar el constructor vacío
 	ListaEvento(int max);
+	bool addEvento(Evento evento);
+	Evento* buscarEvento(string idEvento);
+	bool eliminarEvento(string idEvento);
+	int getN();
 	~ListaEvento();
 };
 

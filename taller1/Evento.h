@@ -18,6 +18,7 @@ private:
 public:
 	Evento();
 	Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, ListaPersona* listaAdministrador);
+	string getIdEvento();
 	~Evento();
 
 private:

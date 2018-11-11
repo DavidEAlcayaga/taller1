@@ -18,6 +18,11 @@ Evento::Evento(string nombre, string ciudad, string idCliente, string tipo, int 
 	this->idAdministrador = verifyAdmin(listaAdministrador, ciudad);
 }
 
+string Evento::getIdEvento()
+{
+	return this->idEvento;
+}
+
 
 
 Evento::~Evento()
@@ -26,5 +31,7 @@ Evento::~Evento()
 
 string Evento::verifyAdmin(ListaPersona* listaAdministrador, string ciudad)
 {
-	return string();
+	for (int i = 0; i < listaAdministrador->getN(); i++) {
+		while(listaAdministrador)
+	}
 }

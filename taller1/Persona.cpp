@@ -6,6 +6,11 @@ Persona::Persona()
 {
 }
 
+string Persona::getId()
+{
+	return this->id;
+}
+
 
 Persona::~Persona()
 {

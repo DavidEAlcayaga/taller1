@@ -3,13 +3,17 @@
 class ListaPersona
 {
 private:
-	Persona * listaPersona;
+	Persona* listaPersona;
 	int max;
 	int n;
 
 public:
 	ListaPersona(); //Siempre hay que conservar el constructor vacío
 	ListaPersona(int n);
+	bool addPersona(Persona persona);
+	Persona* buscarPersona(string id);
+	bool eliminarPersona(string id);
+	int getN();
 	~ListaPersona();
 };
 

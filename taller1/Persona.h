@@ -12,6 +12,7 @@ private:
 
 public:
 	Persona();
+	string getId();
 	~Persona();
 };
 

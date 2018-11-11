@@ -8,9 +8,9 @@ ListaPersona::ListaPersona()
 
 ListaPersona::ListaPersona(int max)
 {
-	this->max = max;
-	this->n = 0;
-	this->listaPersona = new Persona [max];
+    this->max = max;
+    this->n = 0;
+    this->listaPersona = new Persona [max];
 }
 
 void ListaPersona::ordenarId()
@@ -29,18 +29,19 @@ void ListaPersona::ordenarId()
 
 bool ListaPersona::addPersona(Persona persona)
 {
-	if (this->n != max) {
-		this->listaPersona[n] = persona;
-		this->n++;
-		return true;
-	}
-	else {
-		return false;
-	}
+    if (this->n != max) {
+        this->listaPersona[n] = persona;
+        this->n++;
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 Persona * ListaPersona::buscarPersona(string id)
 {
+//<<<<<<< HEAD
 	int i = 0;
 	while (i < this->n && (this->listaPersona[i].getId()).compare(id)==0) {
 		i++;
@@ -78,8 +79,17 @@ int ListaPersona::getN()
 }
 
 
+
 ListaPersona::~ListaPersona()
 {
+    delete[] listaPersona;
+}
+
+string ListaPersona::toString() {
+    string s = "";
+    for(int i=0; i<n; i++){
+       s+=listaPersona[i].toString()+'\n';
+    }
 }
 
 string ListaPersona::getNewId()

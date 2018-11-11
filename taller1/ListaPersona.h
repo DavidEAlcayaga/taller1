@@ -3,11 +3,12 @@
 class ListaPersona
 {
 private:
-	Persona* listaPersona;
-	int max;
-	int n;
+    Persona* listaPersona;
+    int max;
+    int n;
 
 public:
+//<<<<<<< HEAD
 	ListaPersona(); //Siempre hay que conservar el constructor vacío
 	ListaPersona(int n);
 	void ordenarId();
@@ -15,9 +16,9 @@ public:
 	Persona* buscarPersona(string id);
 	bool eliminarPersona(string id);
 	int getN();
+	string toString();
 	~ListaPersona();
 
 private:
 	string getNewId();
 };
-

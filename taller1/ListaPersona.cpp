@@ -165,13 +165,13 @@ string ListaPersona::toString() {
 string ListaPersona::getNewId()
 {
 	string aux = listaPersona[n].getId();
-	if (aux.length == 2) {
+	if (aux.length() == 2) {
 		int aux2 = (int)aux[1];
 		aux2++;
 		aux = aux[0] + (std::to_string(aux2));
 		return aux;
 	}
-	else if (aux.length == 3) {
+	else if (aux.length() == 3) {
 		int aux2 = (int)(aux[1] + aux[2]);
 		if (aux2 < 99) {
 			aux2++;

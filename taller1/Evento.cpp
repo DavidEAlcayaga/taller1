@@ -110,22 +110,3 @@ int Evento::utilidad()
 	return utilidad;
 }
 
-/*
-string Evento::verifyAdmin(ListaPersona* listaAdministrador, string ciudad)
-{
-	int max = 0;
-	Administrador* admin = nullptr;
-	for (int i = 0; i < listaAdministrador->getN(); i++) {
-		if (listaAdministrador->getPosAdmin(i)->getEventosAdministrados()->getN() > max && listaAdministrador->getPosAdmin(i)->getCiudad().compare(ciudad)==0) {
-			max = listaAdministrador->getPosAdmin(i)->getEventosAdministrados()->getN();
-			admin = listaAdministrador->getPosAdmin(i);
-		}
-	}
-	if (admin == nullptr) {
-
-	}
-	else {
-		return admin->getId();
-	}
-}
-*/

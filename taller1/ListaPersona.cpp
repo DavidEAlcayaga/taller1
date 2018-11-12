@@ -108,6 +108,16 @@ Cliente * ListaPersona::buscarCliente(string id)
 	}
 }
 
+void ListaPersona::toString(string ciudad)
+{
+	for (int i = 0; i < this->n; i++) {
+		if (listaPersona[i].getCiudad().compare(ciudad) == 0) {
+			listaPersona[i].toString();
+			cout << "" << endl;
+		}
+	}
+}
+
 bool ListaPersona::eliminarPersona(string id)
 {
 	int i = 0;

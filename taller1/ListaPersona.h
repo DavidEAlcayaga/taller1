@@ -20,6 +20,7 @@ public:
 	Persona* buscarPersona(string id);
 	Administrador* buscarAdmin(string id);
 	Cliente* buscarCliente(string id);
+	void toString(string ciudad);
 	bool eliminarPersona(string id);
 	Administrador* getPosAdmin(int pos);
 	int getN();

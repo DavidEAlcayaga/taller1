@@ -106,15 +106,63 @@ bool Sistema::EventoRealizado(string id, int cantidadAsistentes)
 	else {
 		if (evento->getPersonasAsistentes() > evento->getPersonasEsperadas()) {
 			cout << "No válido, las personas asistentes no deben superar a las esperadas." << endl;
+			return false;
 		}
 		else {
 			cout << "Utilidad:  ";
 			cout << evento->utilidad();
 			cout << "  dólares." << endl;
 			Administrador* admin = administradores->buscarAdmin(evento->getIdAdministrador());
-			
+			admin->setMonto(admin->getMonto() + (evento->utilidad()*0.5));
+			if (admin->getMonto() <= 0) {
+				cout << "El administrador: ";
+				cout << admin->toString();
+				cout << "  fue despedido." << endl;
+				administradores->eliminarPersona(admin->getId());
+			}
+			return true;
 		}
 	}
+}
+
+bool Sistema::CancelarEvento(string id)
+{
+	Evento* evento;
+	evento = eventos->buscarEvento(id);
+	if (evento == nullptr) {
+		cout << "No se encuentra el evento." << endl;
+		return false;
+	}
+	else {
+		Administrador* admin = administradores->buscarAdmin(evento->getIdAdministrador());
+		admin->setMonto(admin->getMonto() + (evento->coste()*0.25));
+		evento->setCancelado();
+		cout << "Evento: ";
+		cout << evento->getNombre();
+		cout << " cancelado" << endl;
+		if (admin->getMonto() <= 0) {
+			cout << "El administrador: ";
+			cout << admin->toString();
+			cout << "  fue despedido." << endl;
+			administradores->eliminarPersona(admin->getId());		
+			return true;
+		}
+	}
+}
+
+void Sistema::EventosTipo(string tipo)
+{
+	eventos->buscarEventoTipo(tipo);
+}
+
+void Sistema::ClientesCiudad(string ciudad)
+{
+	clientes->toString(ciudad);
+}
+
+void Sistema::Administradores()
+{
+	administradores->toString();
 }
 
 

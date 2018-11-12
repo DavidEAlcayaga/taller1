@@ -15,10 +15,7 @@ Persona::Persona() {
 }
 
 //<<<<<<< HEAD
-string Persona::getId()
-{
-	return this->id;
-}
+
 
 //=======
 Persona::~Persona() {

@@ -16,9 +16,6 @@ protected:
 
 public:
 // HEAD
-	Persona();
-	string getId();
-	~Persona();
 	
 	//Constructores
     Persona();

@@ -8,7 +8,7 @@ class Cliente : public Persona
 {
 private:
 	int telefono;
-  ListaEvento* eventosContratados;
+    ListaEvento* eventosContratados;
 
 public:
 	Cliente();

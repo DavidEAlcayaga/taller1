@@ -45,7 +45,17 @@ string Evento::getIdAdministrador()
 
 int Evento::coste()
 {
-	return 0;
+	int coste = 0;
+	if (this->tipo.compare("cultural")) {
+		coste = (2 * this->personasEsperadas);
+	}
+	else if (this->tipo.compare("social")) {
+		coste = (5 * this->personasEsperadas);
+	}
+	else if (this->tipo.compare("deportivo")) {
+		coste = (8 * this->personasEsperadas);
+	}
+	return coste;
 }
 
 int Evento::getPersonasEsperadas()

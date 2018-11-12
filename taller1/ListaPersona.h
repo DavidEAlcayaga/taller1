@@ -1,5 +1,7 @@
 #pragma once
 #include "Persona.h"
+#include "Administrador.h"
+#include "Cliente.h"
 class ListaPersona
 {
 private:
@@ -13,8 +15,13 @@ public:
 	ListaPersona(int n);
 	void ordenarId();
 	bool addPersona(Persona persona);
+	bool addAdmin(Administrador administrador);
+	bool addCliente(Cliente cliente);
 	Persona* buscarPersona(string id);
+	Administrador* buscarAdmin(string id);
+	Cliente* buscarCliente(string id);
 	bool eliminarPersona(string id);
+	Administrador* getPosAdmin(int pos);
 	int getN();
 	string toString();
 	~ListaPersona();

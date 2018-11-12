@@ -6,16 +6,16 @@ Evento::Evento()
 {
 }
 
-Evento::Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, ListaPersona* listaAdministrador)
+Evento::Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, string idAdministrador)
 {
 	this->nombre = nombre;
 	this->ciudad = ciudad;
 	this->idCliente = idCliente;
 	this->tipo = tipo;
 	this->personasEsperadas = personasEsperadas;
-	this->estado = nullptr;
+	this->estado = "por realizar";
 	this->personasAsistentes = 0;
-	this->idAdministrador = verifyAdmin(listaAdministrador, ciudad);
+	this->idAdministrador = idAdministrador;
 }
 
 string Evento::getIdEvento()
@@ -38,14 +38,35 @@ string Evento::getTipo()
 	return this->tipo;
 }
 
+string Evento::getIdAdministrador()
+{
+	return this->idAdministrador;
+}
+
+int Evento::coste()
+{
+	return 0;
+}
+
+int Evento::getPersonasEsperadas()
+{
+	return this->personasEsperadas;
+}
+
+int Evento::getPersonasAsistentes()
+{
+	return this->personasAsistentes;
+}
+
 void Evento::setId(string id)
 {
 	this->idEvento = id;
 }
 
-void Evento::setRealizado()
+void Evento::setRealizado(int asistentes)
 {
 	this->estado = "realizado";
+	this->personasAsistentes = asistentes;
 }
 
 void Evento::setCancelado()
@@ -79,9 +100,22 @@ int Evento::utilidad()
 	return utilidad;
 }
 
+/*
 string Evento::verifyAdmin(ListaPersona* listaAdministrador, string ciudad)
 {
+	int max = 0;
+	Administrador* admin = nullptr;
 	for (int i = 0; i < listaAdministrador->getN(); i++) {
-		while(listaAdministrador)
+		if (listaAdministrador->getPosAdmin(i)->getEventosAdministrados()->getN() > max && listaAdministrador->getPosAdmin(i)->getCiudad().compare(ciudad)==0) {
+			max = listaAdministrador->getPosAdmin(i)->getEventosAdministrados()->getN();
+			admin = listaAdministrador->getPosAdmin(i);
+		}
+	}
+	if (admin == nullptr) {
+
+	}
+	else {
+		return admin->getId();
 	}
 }
+*/

@@ -45,3 +45,8 @@ string Persona::getCiudad() {
 string Persona::toString() {
     return "NOMBRE: "+ nombre+" "+ apellido+" CIUDAD: "+ciudad+" ID: "+id;
 }
+
+void Persona::setId(string id)
+{
+	this->id = id;
+}

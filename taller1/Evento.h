@@ -32,8 +32,6 @@ public:
 	void setPorRealizar();
 	~Evento();
 	int utilidad();
-	string verifyAdmin(ListaPersona* listaAdministrador, string ciudad);
-
 };
 
 

@@ -59,7 +59,6 @@ bool Sistema::AgregarEvento()
 	Evento* evento = new Evento(nombre, ciudad, idCliente, tipo, personasEsperadas, idAdmin);
 	administradores->buscarAdmin(idAdmin)->getEventosAdministrados()->addEvento(*evento);
 	eventos->addEvento(*evento);
-
 }
 
 bool Sistema::AgregarAdministrador()

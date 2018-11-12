@@ -90,6 +90,7 @@ string ListaPersona::toString() {
     for(int i=0; i<n; i++){
        s+=listaPersona[i].toString()+'\n';
     }
+    return s;
 }
 
 string ListaPersona::getNewId()

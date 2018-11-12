@@ -4,10 +4,10 @@
 
 Cliente::Cliente() {}
 
-Cliente::Cliente(string nombre, string apellido, string ciudad, int telefono, int id)
+Cliente::Cliente(string nombre, string apellido, string ciudad, int telefono, string id)
 : Persona(nombre, apellido, ciudad), telefono(telefono) {
 
-        this->id = "C"+to_string(id);
+	this->id = "";
         this->eventosContratados = new ListaEvento(100);
 }
 

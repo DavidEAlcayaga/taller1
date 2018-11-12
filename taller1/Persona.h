@@ -33,6 +33,9 @@ public:
 
     virtual string toString();
 
+	//Setters
+	void setId(string id);
+
     //Destructor
     virtual ~Persona();
 };

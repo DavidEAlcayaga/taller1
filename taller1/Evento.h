@@ -17,18 +17,20 @@ private:
 
 public:
 	Evento();
-	Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, ListaPersona* listaAdministrador);
+	Evento(string nombre, string ciudad, string idCliente, string tipo, int personasEsperadas, string idAdministrador);
 	string getIdEvento();
 	string getNombre();
 	string getEstado();
 	string getTipo();
+	string getIdAdministrador();
+	int coste();
+	int getPersonasEsperadas();
+	int getPersonasAsistentes();
 	void setId(string id);
-	void setRealizado();
+	void setRealizado(int asistentes);
 	void setCancelado();
 	void setPorRealizar();
 	~Evento();
-
-private:
 	int utilidad();
 	string verifyAdmin(ListaPersona* listaAdministrador, string ciudad);
 

@@ -39,6 +39,32 @@ bool ListaPersona::addPersona(Persona persona)
     }
 }
 
+bool ListaPersona::addAdmin(Administrador administrador)
+{
+	if (this->n != max) {
+		administrador.setId(getNewId());
+		this->listaPersona[n] = administrador;
+		this->n++;
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+bool ListaPersona::addCliente(Cliente cliente)
+{
+	if (this->n != max) {
+		cliente.setId(getNewId());
+		this->listaPersona[n] = cliente;
+		this->n++;
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 Persona * ListaPersona::buscarPersona(string id)
 {
 //<<<<<<< HEAD
@@ -48,6 +74,34 @@ Persona * ListaPersona::buscarPersona(string id)
 	}
 	if ((this->listaPersona[i].getId()).compare(id)==0) {
 		return &this->listaPersona[i];
+	}
+	else {
+		return nullptr;
+	}
+}
+
+Administrador * ListaPersona::buscarAdmin(string id)
+{
+	int i = 0;
+	while (i < this->n && (this->listaPersona[i].getId()).compare(id) == 0) {
+		i++;
+	}
+	if ((this->listaPersona[i].getId()).compare(id) == 0) {
+		return dynamic_cast<Administrador*> (&listaPersona[i]);
+	}
+	else {
+		return nullptr;
+	}
+}
+
+Cliente * ListaPersona::buscarCliente(string id)
+{
+	int i = 0;
+	while (i < this->n && (this->listaPersona[i].getId()).compare(id) == 0) {
+		i++;
+	}
+	if ((this->listaPersona[i].getId()).compare(id) == 0) {
+		return dynamic_cast<Cliente*> (&listaPersona[i]);
 	}
 	else {
 		return nullptr;
@@ -71,6 +125,11 @@ bool ListaPersona::eliminarPersona(string id)
 	else {
 		return false;
 	}
+}
+
+Administrador * ListaPersona::getPosAdmin(int pos)
+{
+	return dynamic_cast<Administrador*> (&listaPersona[pos]);
 }
 
 int ListaPersona::getN()

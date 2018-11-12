@@ -12,7 +12,7 @@ private:
 
 public:
 	Cliente();
-  Cliente(string nombre, string apellido, string ciudad, int telefono, int id);
+  Cliente(string nombre, string apellido, string ciudad, int telefono, string id);
 
   ListaEvento* getEventosContratados();
   int getTelefono();

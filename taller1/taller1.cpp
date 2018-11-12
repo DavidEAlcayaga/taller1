@@ -83,7 +83,7 @@ int main() {
 
 		case 3:
 			int command4 = 0;
-			while (command4 != 3) {
+			while (command4 != 4) {
 				cout << "Buscar: " << endl;
 				cout << "1.- Eventos por tipo" << endl;
 				cout << "2.- Clientes por ciudad" << endl;
